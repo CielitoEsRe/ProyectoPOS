@@ -26,11 +26,7 @@ namespace ProyectoPuntodeVenta
             InitializeComponent();
         }
 
-        private void GuardarFacturas()
-        {
-            string json = JsonConvert.SerializeObject(DatosSistema.listaFacturas, Formatting.Indented);
-            File.WriteAllText("facturas.json", json);
-        }
+        
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -146,7 +142,7 @@ namespace ProyectoPuntodeVenta
 
             DatosSistema.listaFacturas.Add(nueva);
 
-            GuardarFacturas();
+            DatosSistema.GuardarFacturas();
 
             numeroFactura++;
 

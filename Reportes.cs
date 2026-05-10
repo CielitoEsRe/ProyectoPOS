@@ -44,6 +44,8 @@ namespace ProyectoPuntodeVenta
                 }
             }
 
+            DatosSistema.GuardarFacturas();
+
             MessageBox.Show("Estado actualizado");
 
             RefrescarPendientes(); 
