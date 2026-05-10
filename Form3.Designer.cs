@@ -220,7 +220,7 @@
             this.dataGridViewVenta.Name = "dataGridViewVenta";
             this.dataGridViewVenta.RowHeadersWidth = 51;
             this.dataGridViewVenta.RowTemplate.Height = 24;
-            this.dataGridViewVenta.Size = new System.Drawing.Size(379, 169);
+            this.dataGridViewVenta.Size = new System.Drawing.Size(426, 186);
             this.dataGridViewVenta.TabIndex = 19;
             this.dataGridViewVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVenta_CellContentClick);
             // 
