@@ -55,5 +55,35 @@ namespace ProyectoPuntodeVenta
             dataGridViewReportes.DataSource = null;
             dataGridViewReportes.DataSource = reporte;
         }
+
+        private void buttonTotalVentas_Click(object sender, EventArgs e)
+        {
+            decimal totalVentas = 0;
+
+            for (int i = 0; i < DatosSistema.listaFacturas.Count; i++)
+            {
+                DateTime fecha = DatosSistema.listaFacturas[i].FechaVenta;
+
+                if (fecha >= dateTimeInicio.Value && fecha <= dateTimeFinal.Value)
+                {
+                    for (int j = 0; j < DatosSistema.listaFacturas[i].Detalles.Count; j++)
+                    {
+                        string codigo = DatosSistema.listaFacturas[i].Detalles[j].CodigoProducto;
+                        int cantidad = DatosSistema.listaFacturas[i].Detalles[j].Cantidad;
+
+                        for (int k = 0; k < DatosSistema.listaProductos.Count; k++)
+                        {
+                            if (DatosSistema.listaProductos[k].Codigo == codigo)
+                            {
+                                totalVentas += DatosSistema.listaProductos[k].PrecioVenta * cantidad;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show("Total de ventas: Q " + totalVentas);
+        }
     }
 }
