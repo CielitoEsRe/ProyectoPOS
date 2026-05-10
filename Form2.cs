@@ -78,5 +78,10 @@ namespace ProyectoPuntodeVenta
                 MessageBox.Show("Seleccione un producto primero");
             }
         }
+
+        private void textCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

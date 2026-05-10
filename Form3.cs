@@ -17,7 +17,6 @@ namespace ProyectoPuntodeVenta
     {
         private List<Cliente> listaClientes = DatosSistema.listaClientes;
         private List<DetalleFactura> listaVenta = new List<DetalleFactura>();
-        private List<Factura> listaFacturas = DatosSistema.listaFacturas;
         private int numeroFactura = 1;
         private decimal precioCompraProducto;
         private decimal precioVentaProducto;
@@ -73,7 +72,7 @@ namespace ProyectoPuntodeVenta
             nuevo.Direccion = textDireccionCliente.Text;
             nuevo.Telefono = textTelefonoCliente.Text;
 
-            listaClientes.Add(nuevo);
+            DatosSistema.listaClientes.Add(nuevo);
 
             MessageBox.Show("Cliente guardado correctamente");
         }
@@ -85,26 +84,82 @@ namespace ProyectoPuntodeVenta
 
         private void buttonAgregarProducto_Click(object sender, EventArgs e)
         {
-            DetalleFactura nuevo = new DetalleFactura();
+            string codigo = textCodigoProducto.Text;
+            int cantidad = Convert.ToInt32(textCantidadVenta.Text);
 
+            for (int i = 0; i < DatosSistema.listaProductos.Count; i++)
+            {
+                if (DatosSistema.listaProductos[i].Codigo == codigo)
+                {
+                    DetalleFactura nuevo = new DetalleFactura();
 
-            nuevo.CodigoProducto = textCodigoProducto.Text;
-            nuevo.Cantidad = Convert.ToInt32(textCantidadVenta.Text);
+                    nuevo.CodigoProducto = codigo;
+                    nuevo.Cantidad = cantidad;
 
-            listaVenta.Add(nuevo);
+                    nuevo.PrecioVenta = DatosSistema.listaProductos[i].PrecioVenta;
+                    nuevo.PrecioCompra = DatosSistema.listaProductos[i].PrecioCompra;
 
-            dataGridViewVenta.DataSource = null;
-            dataGridViewVenta.DataSource = listaVenta;
+                    listaVenta.Add(nuevo);
 
-            MessageBox.Show("Producto agregado a la venta");
+                    dataGridViewVenta.DataSource = null;
+                    dataGridViewVenta.DataSource = listaVenta;
+
+                    MessageBox.Show("Producto agregado");
+                    return;
+                }
+            }
+
+            MessageBox.Show("Producto no encontrado");
         }
 
         private void buttonGenerarFactura_Click(object sender, EventArgs e)
         {
+            if (listaVenta.Count == 0)
+            {
+                MessageBox.Show("No hay productos en la venta");
+                return;
             }
+
+            Factura nueva = new Factura();
+
+            nueva.NumeroFactura = numeroFactura;
+            nueva.NITCliente = textNIT.Text;
+            nueva.FechaVenta = DateTime.Now;
+            nueva.EstadoVenta = "Pendiente";
+
+            for (int i = 0; i < listaVenta.Count; i++)
+            {
+                nueva.Detalles.Add(listaVenta[i]);
+            }
+
+            for (int i = 0; i < listaVenta.Count; i++)
+            {
+                for (int j = 0; j < DatosSistema.listaProductos.Count; j++)
+                {
+                    if (listaVenta[i].CodigoProducto == DatosSistema.listaProductos[j].Codigo)
+                    {
+                        DatosSistema.listaProductos[j].CantidadExistencia -= listaVenta[i].Cantidad;
+                        break;
+                    }
+                }
+            }
+
+            DatosSistema.listaFacturas.Add(nueva);
+
+            GuardarFacturas();
+
+            numeroFactura++;
+
+            listaVenta.Clear();
+            dataGridViewVenta.DataSource = null;
+
+            textNIT.Clear();
+
+            MessageBox.Show("Factura generada correctamente");
+                }
+    }
         }
 
-    }
 
 
 

@@ -123,14 +123,15 @@
             // 
             // textCodigo
             // 
-            this.textCodigo.Location = new System.Drawing.Point(117, 82);
+            this.textCodigo.Location = new System.Drawing.Point(116, 146);
             this.textCodigo.Name = "textCodigo";
             this.textCodigo.Size = new System.Drawing.Size(260, 22);
             this.textCodigo.TabIndex = 8;
+            this.textCodigo.TextChanged += new System.EventHandler(this.textCodigo_TextChanged);
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(122, 149);
+            this.textNombre.Location = new System.Drawing.Point(116, 82);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(255, 22);
             this.textNombre.TabIndex = 9;
