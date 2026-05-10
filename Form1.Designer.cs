@@ -38,7 +38,7 @@
             // 
             this.buttonTrastienda.Location = new System.Drawing.Point(94, 179);
             this.buttonTrastienda.Name = "buttonTrastienda";
-            this.buttonTrastienda.Size = new System.Drawing.Size(149, 49);
+            this.buttonTrastienda.Size = new System.Drawing.Size(147, 89);
             this.buttonTrastienda.TabIndex = 0;
             this.buttonTrastienda.Text = "Trastienda";
             this.buttonTrastienda.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // 
             this.buttonPuntodeVenta.Location = new System.Drawing.Point(330, 182);
             this.buttonPuntodeVenta.Name = "buttonPuntodeVenta";
-            this.buttonPuntodeVenta.Size = new System.Drawing.Size(118, 42);
+            this.buttonPuntodeVenta.Size = new System.Drawing.Size(136, 86);
             this.buttonPuntodeVenta.TabIndex = 1;
             this.buttonPuntodeVenta.Text = "Punto de Venta";
             this.buttonPuntodeVenta.UseVisualStyleBackColor = true;
@@ -56,9 +56,10 @@
             // 
             // buttonReportes
             // 
+            this.buttonReportes.ForeColor = System.Drawing.Color.Black;
             this.buttonReportes.Location = new System.Drawing.Point(549, 182);
             this.buttonReportes.Name = "buttonReportes";
-            this.buttonReportes.Size = new System.Drawing.Size(114, 50);
+            this.buttonReportes.Size = new System.Drawing.Size(128, 86);
             this.buttonReportes.TabIndex = 2;
             this.buttonReportes.Text = "Reportes";
             this.buttonReportes.UseVisualStyleBackColor = true;
@@ -78,6 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonReportes);

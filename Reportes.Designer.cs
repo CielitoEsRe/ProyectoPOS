@@ -44,12 +44,13 @@
             // 
             // dataGridViewReportes
             // 
+            this.dataGridViewReportes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dataGridViewReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewReportes.Location = new System.Drawing.Point(47, 111);
+            this.dataGridViewReportes.Location = new System.Drawing.Point(22, 77);
             this.dataGridViewReportes.Name = "dataGridViewReportes";
             this.dataGridViewReportes.RowHeadersWidth = 51;
             this.dataGridViewReportes.RowTemplate.Height = 24;
-            this.dataGridViewReportes.Size = new System.Drawing.Size(415, 233);
+            this.dataGridViewReportes.Size = new System.Drawing.Size(633, 277);
             this.dataGridViewReportes.TabIndex = 0;
             // 
             // dateTimeInicio
@@ -68,7 +69,7 @@
             // 
             // buttonPendientes
             // 
-            this.buttonPendientes.Location = new System.Drawing.Point(75, 387);
+            this.buttonPendientes.Location = new System.Drawing.Point(75, 388);
             this.buttonPendientes.Name = "buttonPendientes";
             this.buttonPendientes.Size = new System.Drawing.Size(110, 63);
             this.buttonPendientes.TabIndex = 3;
@@ -78,9 +79,9 @@
             // 
             // buttonEntregada
             // 
-            this.buttonEntregada.Location = new System.Drawing.Point(266, 386);
+            this.buttonEntregada.Location = new System.Drawing.Point(262, 387);
             this.buttonEntregada.Name = "buttonEntregada";
-            this.buttonEntregada.Size = new System.Drawing.Size(105, 64);
+            this.buttonEntregada.Size = new System.Drawing.Size(157, 64);
             this.buttonEntregada.TabIndex = 4;
             this.buttonEntregada.Text = "Modificar a Venta Entregada";
             this.buttonEntregada.UseVisualStyleBackColor = true;
@@ -109,35 +110,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(738, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
+            this.label1.Size = new System.Drawing.Size(131, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Fecha de Incio:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(738, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 16);
+            this.label2.Size = new System.Drawing.Size(189, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Fecha de Finalización:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 79);
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Ventas";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(906, 491);
+            this.button1.Location = new System.Drawing.Point(874, 491);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 44);
+            this.button1.Size = new System.Drawing.Size(184, 44);
             this.button1.TabIndex = 10;
             this.button1.Text = "Regresar al Menú Principal";
             this.button1.UseVisualStyleBackColor = true;
@@ -147,6 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1083, 547);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
