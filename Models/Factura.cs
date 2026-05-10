@@ -12,7 +12,7 @@ namespace ProyectoPuntodeVenta.Models
         public string NITCliente { get; set; }
         public DateTime FechaVenta { get; set; }
         public string EstadoVenta { get; set; }
-
+      
         public List<DetalleFactura> Detalles { get; set; }
 
         public Factura()

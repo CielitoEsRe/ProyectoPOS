@@ -19,6 +19,9 @@ namespace ProyectoPuntodeVenta
         private List<DetalleFactura> listaVenta = new List<DetalleFactura>();
         private List<Factura> listaFacturas = DatosSistema.listaFacturas;
         private int numeroFactura = 1;
+        private decimal precioCompraProducto;
+        private decimal precioVentaProducto;
+
         public Form3()
         {
             InitializeComponent();
@@ -84,6 +87,7 @@ namespace ProyectoPuntodeVenta
         {
             DetalleFactura nuevo = new DetalleFactura();
 
+
             nuevo.CodigoProducto = textCodigoProducto.Text;
             nuevo.Cantidad = Convert.ToInt32(textCantidadVenta.Text);
 
@@ -97,41 +101,12 @@ namespace ProyectoPuntodeVenta
 
         private void buttonGenerarFactura_Click(object sender, EventArgs e)
         {
-            Factura nueva = new Factura();
-
-            nueva.NumeroFactura = numeroFactura;
-            nueva.NITCliente = textNIT.Text;
-            nueva.FechaVenta = DateTime.Now;
-            nueva.EstadoVenta = "Pendiente";
-
-            for (int i = 0; i < listaVenta.Count; i++)
-            {
-                nueva.Detalles.Add(listaVenta[i]);
             }
-
-            for (int i = 0; i < listaVenta.Count; i++)
-            {
-                for (int j = 0; j < DatosSistema.listaProductos.Count; j++)
-                {
-                    if (listaVenta[i].CodigoProducto == DatosSistema.listaProductos[j].Codigo)
-                    {
-                        DatosSistema.listaProductos[j].CantidadExistencia -= listaVenta[i].Cantidad;
-                        break;
-                    }
-                }
-            }
-
-            listaFacturas.Add(nueva);
-
-            GuardarFacturas();
-
-
-            numeroFactura++;
-
-            listaVenta.Clear();
-            dataGridViewVenta.DataSource = null;
-
-            MessageBox.Show("Factura generada correctamente");
         }
+
     }
-}
+
+
+
+
+
