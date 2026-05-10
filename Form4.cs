@@ -85,5 +85,40 @@ namespace ProyectoPuntodeVenta
 
             MessageBox.Show("Total de ventas: Q " + totalVentas);
         }
+
+        private void buttonGanancia_Click(object sender, EventArgs e)
+        {
+            decimal gananciaTotal = 0;
+
+            for (int i = 0; i < DatosSistema.listaFacturas.Count; i++)
+            {
+                DateTime fecha = DatosSistema.listaFacturas[i].FechaVenta;
+
+                if (fecha >= dateTimeInicio.Value && fecha <= dateTimeFinal.Value)
+                {
+                    for (int j = 0; j < DatosSistema.listaFacturas[i].Detalles.Count; j++)
+                    {
+                        string codigo = DatosSistema.listaFacturas[i].Detalles[j].CodigoProducto;
+                        int cantidad = DatosSistema.listaFacturas[i].Detalles[j].Cantidad;
+
+                        for (int k = 0; k < DatosSistema.listaProductos.Count; k++)
+                        {
+                            if (DatosSistema.listaProductos[k].Codigo == codigo)
+                            {
+                                decimal precioCompra = DatosSistema.listaProductos[k].PrecioCompra;
+                                decimal precioVenta = DatosSistema.listaProductos[k].PrecioVenta;
+
+                                decimal gananciaProducto = (precioVenta - precioCompra) * cantidad;
+
+                                gananciaTotal += gananciaProducto;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show("Ganancia total: Q " + gananciaTotal);
+        }
     }
 }

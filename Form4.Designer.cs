@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTotalVentas = new System.Windows.Forms.Button();
+            this.buttonGanancia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReportes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,11 +101,22 @@
             this.buttonTotalVentas.UseVisualStyleBackColor = true;
             this.buttonTotalVentas.Click += new System.EventHandler(this.buttonTotalVentas_Click);
             // 
+            // buttonGanancia
+            // 
+            this.buttonGanancia.Location = new System.Drawing.Point(786, 370);
+            this.buttonGanancia.Name = "buttonGanancia";
+            this.buttonGanancia.Size = new System.Drawing.Size(124, 48);
+            this.buttonGanancia.TabIndex = 7;
+            this.buttonGanancia.Text = "Ganacia entre Fechas";
+            this.buttonGanancia.UseVisualStyleBackColor = true;
+            this.buttonGanancia.Click += new System.EventHandler(this.buttonGanancia_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 533);
+            this.Controls.Add(this.buttonGanancia);
             this.Controls.Add(this.buttonTotalVentas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -129,5 +141,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonTotalVentas;
+        private System.Windows.Forms.Button buttonGanancia;
     }
 }

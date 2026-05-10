@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPuntodeVenta.Models;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace ProyectoPuntodeVenta
 {
@@ -20,6 +22,12 @@ namespace ProyectoPuntodeVenta
         public Form3()
         {
             InitializeComponent();
+        }
+
+        private void GuardarFacturas()
+        {
+            string json = JsonConvert.SerializeObject(DatosSistema.listaFacturas, Formatting.Indented);
+            File.WriteAllText("facturas.json", json);
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -114,6 +122,9 @@ namespace ProyectoPuntodeVenta
             }
 
             listaFacturas.Add(nueva);
+
+            GuardarFacturas();
+
 
             numeroFactura++;
 
