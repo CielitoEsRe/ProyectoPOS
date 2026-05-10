@@ -43,6 +43,7 @@
             this.textPrecioVenta = new System.Windows.Forms.TextBox();
             this.textCantidad = new System.Windows.Forms.TextBox();
             this.buttonActualizarProducto = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,11 +175,22 @@
             this.buttonActualizarProducto.UseVisualStyleBackColor = true;
             this.buttonActualizarProducto.Click += new System.EventHandler(this.buttonActualizarProducto_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1000, 549);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 46);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Reegresar al Menú Principal";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 564);
+            this.ClientSize = new System.Drawing.Size(1201, 617);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonActualizarProducto);
             this.Controls.Add(this.textCantidad);
             this.Controls.Add(this.textPrecioVenta);
@@ -195,7 +207,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Trastienda";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).EndInit();
             this.ResumeLayout(false);
@@ -220,5 +232,6 @@
         private System.Windows.Forms.TextBox textPrecioVenta;
         private System.Windows.Forms.TextBox textCantidad;
         private System.Windows.Forms.Button buttonActualizarProducto;
+        private System.Windows.Forms.Button button1;
     }
 }

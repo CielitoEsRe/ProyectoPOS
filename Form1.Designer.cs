@@ -84,7 +84,7 @@
             this.Controls.Add(this.buttonPuntodeVenta);
             this.Controls.Add(this.buttonTrastienda);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sistema POS";
             this.ResumeLayout(false);
             this.PerformLayout();
 

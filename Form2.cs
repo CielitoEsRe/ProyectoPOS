@@ -83,5 +83,11 @@ namespace ProyectoPuntodeVenta
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 ventana = new Form1();
+            ventana.Show();
+        }
     }
 }

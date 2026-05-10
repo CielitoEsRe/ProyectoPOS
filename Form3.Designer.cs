@@ -49,6 +49,7 @@
             this.buttonAgregarProducto = new System.Windows.Forms.Button();
             this.dataGridViewVenta = new System.Windows.Forms.DataGridView();
             this.buttonGenerarFactura = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVenta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,11 +234,22 @@
             this.buttonGenerarFactura.UseVisualStyleBackColor = true;
             this.buttonGenerarFactura.Click += new System.EventHandler(this.buttonGenerarFactura_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(944, 514);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 49);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Regresar al Menú Principal";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1139, 575);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonGenerarFactura);
             this.Controls.Add(this.dataGridViewVenta);
             this.Controls.Add(this.buttonAgregarProducto);
@@ -260,7 +272,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Punto de Venta";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVenta)).EndInit();
             this.ResumeLayout(false);
@@ -291,5 +303,6 @@
         private System.Windows.Forms.Button buttonAgregarProducto;
         private System.Windows.Forms.DataGridView dataGridViewVenta;
         private System.Windows.Forms.Button buttonGenerarFactura;
+        private System.Windows.Forms.Button button1;
     }
 }
